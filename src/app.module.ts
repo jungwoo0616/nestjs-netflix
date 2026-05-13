@@ -68,6 +68,9 @@ import * as winston from 'winston';
           MovieUserLike,
         ],
         synchronize: true, 
+        ssl: { // 보안적인 것
+          rejectUnauthorized: false, // ssl을 사용하지 않더라도 연결할 수 있도록 학것임(우리는 지금 배포가 목적이니까)
+        }
       }),
       inject: [ConfigService] // TypeOrmModule.forRootAsync()를 만들 때, IOC 컨테이너에서 ConfigService를 dependency injection을 해줘야 한다고 알려주기 위함
     }),
