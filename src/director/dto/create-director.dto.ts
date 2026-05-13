@@ -7,7 +7,7 @@ export class CreateDirectorDto {
 
     @IsNotEmpty()
     @IsDateString()
-    dob!: Date;
+    dob!: string;
 
     @IsNotEmpty()
     @IsString()
